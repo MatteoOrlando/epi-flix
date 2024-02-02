@@ -5,7 +5,7 @@ import TopBar from './components/TopBar';
 import MyFooter from './components/MyFooter';
 import Gallery from './components/Gallery';
 import { Container } from 'react-bootstrap';
-import HeaderComponent from './components/HeaderComponent';
+
 //da qui import per la profile page
 // import HeaderComponent from './components/HeaderComponent';
 // import MyProfileComponent from './components/MyProfileComponent';

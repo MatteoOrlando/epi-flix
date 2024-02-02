@@ -42,14 +42,33 @@ class Gallery extends Component {
                 <Row className="g-1 text-light">
                     {error && (
                         <Alert variant="danger">
-                            {/* EXTRA gestione errori: compare un alert quando qualcosa non funziona:(src: internet/Appunti prof*/}
+                            {/* EXTRA gestione errori: compare un alert quando qualcosa non funziona:(src: internet/Appunti*/}
                             <Alert.Heading>Oh no! Qualcosa è andato storto...</Alert.Heading>
                             <p>{error}</p>
                             <hr />
                             <p className="mb-0">Riprova più tardi o contattaci se il problema persiste.</p>
                         </Alert>
                     )}
+                    {loading ? (
+                        <>
+                            {/* EXTRA creato div placeholder per caricamento, quando non carica si disattiva */}
+                            <Col xs={12}>
+                                <div style={{ backgroundColor: "#333", width: "100%", height: "100px" }}></div>
+                            </Col>
+                        </>
+                    ) : (
+                        movies.map((movie) => (
+                            <Col key={movie.imdbID} xs={6} md={4} lg="2" className="hover-zoom">
+                                <img
+                                    src={movie.Poster}
+                                    alt={movie.Title}
+                                    className="img-fluid"
+                                    style={{ width: "200px", height: "100px", objectFit: "cover" }}
+                                />
 
+                            </Col>
+                        ))
+                    )}
                 </Row>
             </div>
         );

@@ -1,38 +1,24 @@
-.App {
-  text-align: center;
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css');
+.hover-zoom:hover {
+  transform: scale(1.2);
+  transition: transform 0.1s ease-in-out;
+  cursor: pointer;
+}
+/*hover sui film come avevo fatto sul primo netflix e sl menu'*/
+
+.dark-background {
+  background-color: #141414;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.link-hover:hover {
+  color: white !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* per pagina settings */
+.no-border-listgroup .list-group-item {
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.no-underline-link a {
+  text-decoration: none;
 }
